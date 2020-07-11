@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'Gfgproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfoliodb',
+        'NAME': 'gfg',
         'USER': 'postgres',
         'PASSWORD': 'infosys1',
         'HOST': 'localhost',
