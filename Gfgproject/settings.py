@@ -60,7 +60,7 @@ ROOT_URLCONF = 'Gfgproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,4 +134,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static/'),
+    os.path.join(BASE_DIR, 'static/vendor/freelancer/')
+)
 STATIC_URL = '/static/'
+
+try:
+    print("Importing settings local file")
+    from Gfgproject.settings_local import *
+except Exception as exp:
+    print("settings local not found")

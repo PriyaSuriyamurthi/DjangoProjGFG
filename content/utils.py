@@ -19,4 +19,5 @@ def compute():
         # This means something went wrong.
         raise APIError('GET /tasks/ {}'.format(resp.status_code))
     for todo_item in resp.json():
-        print('{}'.format(todo_item))
+        if (todo_item["meta"]["id"] == word):
+            print('{}'.format(todo_item["meta"]["stems"]))
