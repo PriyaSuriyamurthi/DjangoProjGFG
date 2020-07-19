@@ -15,5 +15,5 @@ def home_view(request):
 def base_view(request):
     """ Renders base Page"""
     template = 'base.html'
-    context = {}
+    context = {"word": "example"}
     return render(request, template, context)

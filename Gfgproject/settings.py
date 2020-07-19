@@ -68,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.static',
             ],
         },
     },
@@ -135,13 +136,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static/'),
-    os.path.join(BASE_DIR, 'static/vendor/freelancer/')
+    os.path.join(BASE_DIR, "static/"),
+    os.path.join(BASE_DIR, "static/vendor/freelancer/"),
 )
 STATIC_URL = '/static/'
 
-try:
-    print("Importing settings local file")
-    from Gfgproject.settings_local import *
-except Exception as exp:
-    print("settings local not found")
+# try:
+#     print("Importing settings local file")
+#     from Gfgproject.settings_local import *
+# except Exception as exp:
+#     print("settings local not found")
